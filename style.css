@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: 'nudica_monoregular';
+    src: url('fonts/nudicamono-regular-webfont.woff2');
+}
+   
+
+body {
+    font-family: 'nudica_monoregular';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+/* base */
+
+h1 {
+      background-color: white;
+      color: black;
+      font-size: 200px;
+      padding-top: 20vh;
+      padding-bottom: 15rem;
+  
+
+}
+
+/* Scroll-triggered Animation Section */
+
+.scroll-animate {
+    min-height: 40vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animate-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-out;
+}
+
+.animate-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-element h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.animate-element p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 500px;
+    text-align: center; 
+}
+

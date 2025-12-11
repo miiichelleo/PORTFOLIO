@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     color: black;
 }
 
@@ -19,13 +18,73 @@ body {
 h1 {
       background-color: white;
       color: black;
-      font-size: 200px;
+      text-align: center;
+      font-size: 8rem;
       padding-top: 20vh;
-      padding-bottom: 15rem;
+      padding-bottom: 2rem;
   
 
 }
 
+h2 {
+    text-align: left;
+    font-size: 8rem;
+}
+
+.p1 {
+text-align: center;
+font-size: 1.5rem;
+padding-bottom:15rem;
+
+
+}
+
+.p2 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom:30rem;
+    color: #E53D28;
+    
+    
+    }
+    
+    .p3 {
+        padding: 10rem;      
+        font-size: 1.5rem;
+        text-align: center;
+      }  
+
+    .p3 span {
+        color: #E53D28;
+    }
+    
+    .AboutMe {
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;          /* space between image + text */
+        padding: 0rem 1rem 0rem 0rem;
+      }
+    .portrait {
+        width: 35rem;   /* change to whatever size you want */
+        height: auto;
+        display: block;
+        border-radius: 300rem;
+      }
+
+      .timeline-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 5rem 0;
+    }
+    
+    .timeline {
+        width: 101%;       /* adjust size as needed */
+        height: auto;
+        display: block;
+        padding-bottom: 6rem;
+    }
+      
 /* Scroll-triggered Animation Section */
 
 .scroll-animate {
@@ -33,15 +92,15 @@ h1 {
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 .animate-element {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     opacity: 0;
     transform: translateY(100px);
     transition: all 0.5s ease-out;
@@ -53,7 +112,7 @@ h1 {
 }
 
 .animate-element h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
 }
 
@@ -61,6 +120,6 @@ h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     max-width: 500px;
-    text-align: center; 
+    text-align: left; 
 }
 

@@ -33,6 +33,7 @@ h2 {
 
 .p1 {
 text-align: center;
+;
 font-size: 1.5rem;
 padding-bottom:15rem;
 
@@ -49,9 +50,9 @@ padding-bottom:15rem;
     }
     
     .p3 {
-        padding: 10rem;      
-        font-size: 1.5rem;
-        text-align: center;
+        padding: 5rem;      
+        font-size: 2rem;
+        text-align: justify;
       }  
 
     .p3 span {
@@ -71,6 +72,13 @@ padding-bottom:15rem;
         border-radius: 300rem;
       }
 
+    .comment {
+        padding: 10rem 0 0 30rem;      
+        font-size: 1.5rem;
+        text-align: justify;
+        font-style: italic;
+    }
+    
       .timeline-wrapper {
         width: 100%;
         display: flex;
@@ -84,6 +92,22 @@ padding-bottom:15rem;
         display: block;
         padding-bottom: 6rem;
     }
+    .projects {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: auto auto auto;
+        padding: 3rem;
+      }
+      .projects div {
+        background-color: #f1f1f1;
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 30px;
+        text-align: center;
+        height: 40rem;
+        
+        
+      }
       
 /* Scroll-triggered Animation Section */
 

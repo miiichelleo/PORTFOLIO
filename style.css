@@ -40,10 +40,11 @@ nav menu li a {
   text-decoration: none;
   padding: 1em 1em;
   border-radius: 0.25em;
+  transition: color 0.2s ease;
 }
 
 nav menu li a:hover {
-  color: #E53D28;
+  color: #d4d4d3;
 }
 
 body {
@@ -54,44 +55,56 @@ body {
     color: black;
     
 }
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background: #d4d4d3;
+  transition: width 0.3s ease;
+}
+
+body:has(#one:target) nav a[href="#one"]::after,
+body:has(#two:target) nav a[href="#two"]::after,
+body:has(#three:target) nav a[href="#three"]::after,
+body:has(#four:target) nav a[href="#four"]::after {
+  width: 100%;
+}
 
 
 /* base */
 
-h1 {
+.opening h1 {
       background-color: white;
       color: black;
       text-align: center;
-      left: 0;
+      display: flex;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
       font-size: 27rem;
       padding-top: 31vh;
-      padding-bottom: 2rem;
-      transform: translateX(-0.15em);
+      padding-bottom: 10rem;
+      width: 100%;
 }
 
 .base {
-  font-size: 20rem;
-  text-align: left;
-
-  
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 27rem;
+  color: #d4d4d3;
+  z-index: 0; /* higher = in front */
+  padding-top: 32rem;
 }
-.design-overlay {
-    position: fixed;
-    inset: 0;
-    background: white; /* overlay color */
-    z-index: 2;
-    pointer-events: none; /* clicks pass through */
-    
-    /* CUT-OUT HOLES */
-    -webkit-mask-image: 
-      radial-gradient(circle at 50% 35%, transparent 180px, black 181px),
-      radial-gradient(circle at 20% 65%, transparent 120px, black 121px);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: 0 0;
-  }
-
 
 
 
@@ -111,10 +124,11 @@ padding-bottom:15rem;
 
 .p2 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 10rem;
+    padding-top: 50rem;
     padding-bottom:30rem;
     color: #E53D28;
-    
+    z-index: 4;
     
     }
     
@@ -129,6 +143,10 @@ padding-bottom:15rem;
     }
     .one {
       background-color: black;
+    }
+    
+    .container {
+      padding-top: 100rem;
     }
     .AboutMe {
         display: flex;
